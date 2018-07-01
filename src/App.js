@@ -16,7 +16,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app"/>
+
+      <div className="app">
+
+        <div className="list-books">
+          <div className="list-books-title">
+            <h1 tabIndex="0">My Reads</h1>
+          </div>
+        </div>
+
+      </div>
 
     )
   }// render ends
