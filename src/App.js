@@ -1,6 +1,8 @@
 import React from 'react'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
+import Header from './Header'
+import Shelves from './Shelves'
 
 class App extends React.Component {
 
@@ -14,19 +16,34 @@ class App extends React.Component {
     })
   }
 
-  render() {
-    return (
+  changeShelf = (book, shelf) => {
+    if (this.state.books) {
+      BooksAPI.update(book,shelf).then(() => {
+        book.shelf = shelf;
+        this.setState(state => ({
+          books: state.books.filter(b => b.id !== book.id).concat([book])
+        }))
+      })
+    }
+  }
 
+  render() {
+    const { books } = this.state
+
+    return (
       <div className="app">
 
         <div className="list-books">
-          <div className="list-books-title">
-            <h1 tabIndex="0">My Reads</h1>
-          </div>
+
+          <Header />
+
+          <Shelves
+            books={books}
+            onChangeShelf={this.changeShelf} />
+
         </div>
 
       </div>
-
     )
   }// render ends
 
