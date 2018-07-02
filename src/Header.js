@@ -6,7 +6,7 @@ class Header extends Component {
     return (
 
       <div className="list-books-title">
-        <h1>My Reads</h1>
+        <h1>My Reads App</h1>
       </div>
 
     );

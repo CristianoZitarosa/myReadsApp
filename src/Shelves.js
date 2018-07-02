@@ -25,7 +25,7 @@ class Shelves extends Component {
 
               <Book books={books}
                 book={book}
-                onChangeShelf={onChangeShelf}/>
+                onChangeShelf={onChangeShelf} />
 
                   </li>
                 ))}

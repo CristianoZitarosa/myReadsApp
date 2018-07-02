@@ -1,8 +1,11 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 import Header from './Header'
 import Shelves from './Shelves'
+import Searchpage from './Searchpage'
 
 class App extends React.Component {
 
@@ -37,16 +40,34 @@ class App extends React.Component {
 
           <Header />
 
-          <Shelves
-            books={books}
-            onChangeShelf={this.changeShelf} />
+          <Route exact path="/" render={(history) => (
+            <div>
+              <Shelves
+                books={books}
+                onChangeShelf={this.changeShelf}
+              />
+              </div>
+            )} />
 
+            <Route path="/search" render={(history) => (
+              <div>
+                <Searchpage
+                  books={books}
+                  onChangeShelf={this.changeShelf}
+                />
+              </div>
+            )} />
+
+        </div>
+
+        <div className="open-search">
+          <Link to="/search" className="search">Browse catalog</Link>
         </div>
 
       </div>
     )
-  }// render ends
+  }
 
-}// class ends
+}
 
 export default App
