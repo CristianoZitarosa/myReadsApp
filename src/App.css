@@ -13,7 +13,8 @@ body {
 body,
 .app {
   background: #fff;
-  background: url('http://www.designbolts.com/wp-content/uploads/2012/12/Triangle-White-Seamless-Patterns.jpg');
+  background: url('./icons/seamless-pattern.jpg');
+  /* background image from: http://www.designbolts.com/2012/12/22/50-free-simple-white-seamless-patterns-for-website-backgrounds/ */
 }
 
 /* main page */
