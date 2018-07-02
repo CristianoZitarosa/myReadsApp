@@ -7,6 +7,12 @@ import Header from './Header'
 import Shelves from './Shelves'
 import Searchpage from './Searchpage'
 
+const shelves = [
+  { 'id': 'currentlyReading', 'label': 'Currently Reading' },
+  { 'id': 'wantToRead', 'label': 'Want to Read' },
+  { 'id': 'read', 'label': 'Read' }
+]
+
 class App extends React.Component {
 
   state = {
@@ -34,22 +40,28 @@ class App extends React.Component {
     const { books } = this.state
 
     return (
-      <div className="app">
+      <div className='app'>
 
-        <div className="list-books">
+        <div className='list-books'>
 
           <Header />
 
-          <Route exact path="/" render={(history) => (
+          <Route exact path='/' render={(history) => (
             <div>
               <Shelves
                 books={books}
+                shelves={shelves}
                 onChangeShelf={this.changeShelf}
               />
+
+              <div className='open-search'>
+                <Link to='/search' className='search'>Browse catalog</Link>
               </div>
+
+            </div>
             )} />
 
-            <Route path="/search" render={(history) => (
+            <Route path='/search' render={(history) => (
               <div>
                 <Searchpage
                   books={books}
@@ -58,10 +70,6 @@ class App extends React.Component {
               </div>
             )} />
 
-        </div>
-
-        <div className="open-search">
-          <Link to="/search" className="search">Browse catalog</Link>
         </div>
 
       </div>
