@@ -40,12 +40,16 @@ Steps needed to run this application:
 
 ### Set the behavior of the server at the starting:
 
+__If your wish is to open the application in the default browser, do not care of the following.__
 As mentioned in the previous point, starting the server, the application will be automatically launched in the default browser.
-If you wish to prevent this default behavior or to change the browser where the application is launched (for example I used Chrome Canary for the development instead of my default browser) please refer to the `.env` file in the root of the application.
+
+If you wish to prevent this default behavior or to change the browser where the application is launched (*for example I used Chrome Canary for the development instead of my default browser*) please refer to the `.env` file in the root of the application.
+
 Open it in the editor and choose an option.
 At the moment both options are left commented (a commented string in the `.env` file is identified by the character `#`).
-Leaving it unchanged, the default behavior will be followed after the server started.
-If your wish is to use a different browser, you have to insert the path to launch the browser on your system in place of the string `{INSERT_THE_PATH_HERE}`.
+Leaving it unchanged, it will be followed the default behavior after the server is started.
+If your wish is to use a different browser,find and insert the path to launch the browser on your system in place of the string `{INSERT_THE_PATH_HERE}`.
+
 
 ### License:
 
