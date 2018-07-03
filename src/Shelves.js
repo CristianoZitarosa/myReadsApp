@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Book from './Book'
 
-class Shelves extends Component {
-  render() {
+const Shelves = (props) => {
 
-    const {books, shelves, onChangeShelf} = this.props
+    const {books, shelves, onChangeShelf} = props
 
     return (
 
@@ -34,7 +33,6 @@ class Shelves extends Component {
 
     );
   }
-}
 
 
 export default Shelves

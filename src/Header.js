@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Header extends Component {
-  render() {
+const Header = () => {
 
     return (
 
@@ -10,7 +9,6 @@ class Header extends Component {
       </div>
 
     );
-  }
 }
 
 export default Header
