@@ -28,15 +28,24 @@ It is connected to a database of other books to browse._(note: the search terms 
 
 ### How to run this app:
 
-To run this application it is needed:
+Steps needed to run this application:
 * Download/clone this project's repository from github;
-* npm installed, [go here to install](https://www.npmjs.com/);
+* To have npm installed, [go here to download](https://www.npmjs.com/);
 * After npm is installed open a terminal and `cd` into the project's folder (reach the path of the project into the terminal;
 * In the terminal use the command `npm install` to install it in the project;
-* Use this command line in the terminal to start the server: `npm start`;
+* To start the server in the terminal use the command: `npm start`;
 * If everything is correct, your browser(**) will launch the application at: `http://localhost:3000`.
 
 (**) *Please note, your browser could be not compatible with features on this project, please be sure to get it updated and to use a modern browser*.
+
+### Set the behavior of the server at the starting:
+
+As mentioned in the previous point, starting the server, the application will be automatically launched in the default browser.
+If you wish to prevent this default behavior or to change the browser where the application is launched (for example I used Chrome Canary for the development instead of my default browser) please refer to the `.env` file in the root of the application.
+Open it in the editor and choose an option.
+At the moment both options are left commented (a commented string in the `.env` file is identified by the character `#`).
+Leaving it unchanged, the default behavior will be followed after the server started.
+If your wish is to use a different browser, you have to insert the path to launch the browser on your system in place of the string `{INSERT_THE_PATH_HERE}`.
 
 ### License:
 
