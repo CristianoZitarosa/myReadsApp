@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "js-yaml": "^3.13.1",
     "merge": "^1.2.1",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
