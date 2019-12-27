@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.3.0",
     "js-yaml": "^3.13.1",
     "merge": "^1.2.1",
     "prop-types": "^15.6.1",
